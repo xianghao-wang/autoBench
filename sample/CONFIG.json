@@ -1,0 +1,40 @@
+{
+    "app_path": "./sample/openmp/",
+    "bench_path": "./sample/bench.csv",
+    "result_path": "./sample/result.csv",
+    "toolchain": {
+        "0": {
+            "tool": "make",
+            "envs": {},
+            "args": {
+                "clean": null
+            },
+            "greps": {}
+        },
+        "1": {
+            "tool": "make",
+            "envs": {
+                
+            },
+            "args": {
+                "WGSIZE": 64
+            },
+            "greps": {
+
+            }
+        },
+        "2": {
+            "tool": "./bude",
+            "envs": {
+                "OMP_NUM_THREADS": 8
+            },
+            "args": {
+                
+            },
+            "greps": {
+                "t": "Total time.+?(\\d+\\.?\\d+)",
+                "at": "Average time.+?(\\d+\\.?\\d+)"
+            }
+        }
+    } 
+}
