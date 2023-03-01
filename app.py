@@ -1,6 +1,6 @@
 from bench import bench
+import sys
 
 if __name__ == '__main__':
-    config = input("Please enter your benchmark configuration path: ")
-    b = bench(config)
+    b = bench(sys.argv[1])
     b.store(b.benchAll())
